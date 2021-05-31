@@ -48,7 +48,7 @@ https://sysbird.jp/toriko/webapi/
     // 分割
     $(".jaga_name").children().addBack().contents().each(function() {
       if (this.nodeType == 3) {
-        var $this = $(this);
+        let $this = $(this);
         $this.replaceWith($this.text().replace(/(\S)/g, "<span>$&</span>"));
       }
     });
