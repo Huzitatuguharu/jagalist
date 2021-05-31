@@ -1,0 +1,428 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
+
+/* フォーム */
+input,
+select,
+textarea,
+button {
+  font-size: 100%;
+  font-family: inherit;
+}
+
+/* Color Theme Swatches in Hex */
+.My-Color-Theme-1-hex {
+  color: #F57F89;
+  color: #4CB58F;
+  color: #30C78F;
+  color: #F2EC96;
+  color: #FFFCD1;
+  color: #363324;
+}
+
+.color-theme_スクリーンショット-2021-05-30-231241-1-hex {
+  color: #D92332;
+  color: #03A66A;
+  color: #038C5A;
+  color: #F2E9BD;
+  color: #F2BA52;
+}
+
+
+
+
+a:link {
+  text-decoration: none;
+
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-style: normal;
+  background-color: #FFFCD1;
+  font-weight: 500;
+}
+
+h1 {
+  font-family: 'Noto Sans JP',
+    sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+.area {
+  margin: 0 64px 64px 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.jaga_list,
+.jaga_name {
+  font-weight: 700;
+  font-size: 48px;
+
+  text-shadow: #F2BA52 2px 0px,
+    #F2BA52 -2px 0px,
+    #F2BA52 0px -2px,
+    #F2BA52 0px 2px,
+    #F2BA52 2px 2px,
+    #F2BA52 -2px 2px,
+    #F2BA52 2px -2px,
+    #F2BA52 -2px -2px,
+    #F2BA52 1px 2px,
+    #F2BA52 -1px 2px,
+    #F2BA52 1px -2px,
+    #F2BA52 -1px -2px,
+    #F2BA52 2px 1px,
+    #F2BA52 -2px 1px,
+    #F2BA52 2px -1px,
+    #F2BA52 -2px -1px;
+
+}
+
+.jaga_list,
+.jaga_name {
+  text-align: center;
+}
+.jaga_list span:nth-child(2n+1),
+.jaga_name span:nth-child(2n+1) {
+  color: #03A66A;
+}
+.jaga_list span:nth-child(2n),
+.jaga_name span:nth-child(2n) {
+  color: #D92332;
+}
+
+.container {
+  display: flex;
+  background-color: #FFF;
+  width: 640px;
+  border-radius: 5px;
+
+}
+
+.container__half {
+  flex: 1;
+}
+
+.container__half {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.jaga_url {
+  text-align: center;
+  margin: 48px;
+}
+
+.jaga_comment {
+  margin: 24px;
+}
+
+.morebtn {
+  font-family: 'Noto Sans JP',
+    sans-serif;
+  font-weight: 500;
+
+  font-size: 16px;
+  color: #FFF;
+  background: #F2BA52;
+  border: none;
+  position: relative;
+  height: 60px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+  border-radius: 3px;
+  margin: 16px;
+}
+
+.morebtn:hover {
+  background: #fff;
+  color: #F2BA52;
+}
+
+.morebtn:before,
+.morebtn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #D92332;
+  transition: 400ms ease all;
+}
+
+.morebtn:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+.morebtn:hover:before,
+.morebtn:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+/* 登録 */
+
+
+.submitbtn {
+  font-family: 'Noto Sans JP',
+    sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+
+  color: #FFF;
+  background: #F2BA52;
+  border: none;
+  position: relative;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+  border-radius: 5px;
+  margin: 64px 0 16px 0;
+}
+
+.submitbtn:hover {
+  background: #fff;
+  color: #F2BA52;
+}
+
+.submitbtn:before,
+.submitbtn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #D92332;
+  transition: 400ms ease all;
+}
+
+.submitbtn:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+.submitbtn:hover:before,
+.submitbtn:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+.submitbtn_parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnarea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+margin: 24px;
+}
+
+/* もう１回 */
+.seebtn,
+.againbtn {
+  font-family: 'Noto Sans JP',
+    sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+
+  background: #03A66A;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 60px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+  border-radius: 3px;
+  margin: 16px;
+}
+
+.seebtn:hover,
+.againbtn:hover {
+  background: #fff;
+  color: #D92332;
+}
+
+.seebtn:before,
+.seebtn:after,
+.againbtn:before,
+.againbtn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #D92332;
+  transition: 400ms ease all;
+}
+
+.seebtn:after,
+.againbtn:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+
+.seebtn:hover:before,
+.seebtn:hover:after,
+.againbtn:hover:before,
+.againbtn:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+
+
+/* 「icon」ではじまるclass名をもつアイコンすべてに適用 */
+[class^="material"] {
+
+  position: relative;
+  top: 5px;
+  fill: #fff;
+  font-weight: 500;
+}
+
+.comment {
+  margin: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* コメント欄 */
+.ribbon16-wrapper {
+  display: block;
+  position: relative;
+  margin: 96px auto;
+  padding: 10px 0;
+  width: 300px;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.ribbon16 {
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: 10px;
+  margin: 0;
+  padding: 10px 0 7px;
+  z-index: 2;
+  width: 40px;
+  text-align: center;
+  color: white;
+  font-size: 13px;
+  background: #F2BA52;
+  border-radius: 2px 0 0 0;
+}
+
+.ribbon16:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: -5px;
+  border: none;
+  border-bottom: solid 6px #ba9144;
+  border-right: solid 5px transparent;
+}
+
+.ribbon16:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100%;
+  height: 0;
+  width: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 10px solid #F2BA52;
+}
+
+textarea {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  max-height: 170px;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #e4d8c1;
+  font-size: 14px;
+  outline: none;
+  line-height: 1.6;
+  resize: vertical;
+}
+textarea:focus {
+  outline: 0;
+  box-shadow: 0 0 0 3px #F2BA52 inset;
+}
+
+/* read.csv */
+/* タイトル */
+#jagalist_title{
+  margin: 48px;
+}
+
+/* リスト縦並び */
+.listarea{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* じゃがリスト */
+
+.box30 {
+  margin: 2em 0;
+  width:360px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+  border-radius: 5px;
+}
+
+.box30 .box-title {
+  font-size: 1.3em;
+  background: #F2BA52;
+  padding: 8px;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  border-radius: 5px;
+
+}
+
+.box30 p {
+  padding: 15px 20px;
+  margin: 0;
+}
+
+#jagalist_btn{
+  margin: 48px;
+}
