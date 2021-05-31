@@ -56,7 +56,7 @@ $arr_jaga = json_encode($arr_jaga, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASH
         </div>
         <div class="comment">
           <p>コメント</p>
-          <textarea name="jaga_comment" required ></textarea>
+          <textarea name="jaga_comment" required></textarea>
         </div>
         <div class="submitbtn_parent">
           <button class=submitbtn required>リストに追加</button>
@@ -90,8 +90,6 @@ $arr_jaga = json_encode($arr_jaga, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASH
     jagaurl = jaga.item.url
     $('.jaga_url').append(`<p><a href="${jagaurl}" class="morebtn">もっとくわしく</a></p>`);
     $('.jaga_name_send').append(`<input type = "hidden" name="jaga_name" value="${jaganame}">`);
-
-
     // 分割
     $(".jaga_name").children().addBack().contents().each(function() {
       if (this.nodeType == 3) {
@@ -119,7 +117,6 @@ $arr_jaga = json_encode($arr_jaga, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASH
         }, 1250);
       }
     });
-  </script>
   </script>
 
 

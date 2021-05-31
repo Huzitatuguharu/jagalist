@@ -9,6 +9,8 @@ var_dump($jaganame);
 
 // 書き込み
 
+
+
 $write_data = "{$jaganame},{$jagacomment}\n";
 
 // ファイルを開く 引数はa
