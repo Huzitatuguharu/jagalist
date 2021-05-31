@@ -49,25 +49,32 @@ $arr_jaga = json_encode($arr_jaga, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASH
 
 
       <div class="ribbon16-wrapper">
-        <span class="ribbon16"><i class="material-icons-round">
+        <span class="ribbon16"><i class="material-icons-round" id="icon_star">
             star
           </i></span>
         <div>
         </div>
         <div class="comment">
           <p>コメント</p>
-          <textarea name="jaga_comment" required></textarea>
+          <textarea name="jaga_comment" required rows="5"></textarea>
         </div>
         <div class="submitbtn_parent">
-          <button class=submitbtn required>リストに追加</button>
+          <button class=submitbtn required><i class="material-icons-round">
+              add_circle_outline
+            </i>リストに追加</button>
         </div>
       </div>
 
   </form>
 
   <div class="btnarea">
-    <p><a href="" class="againbtn">じゃがさがし</a></p>
-    <p> <a href="todo_csv_read.php" class="seebtn">じゃがリスト</a></p>
+    <p><a href="" class="againbtn"><i class="material-icons-round" id="icon_search">
+          search
+        </i>じゃがさがし</a></p>
+    <p> <a href="todo_csv_read.php" class="seebtn">
+        <i class="material-icons-round">
+          import_contacts
+        </i>じゃがリスト</a></p>
   </div>
 
   </div>
@@ -88,7 +95,9 @@ $arr_jaga = json_encode($arr_jaga, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASH
     $('.jaga_comment').append(`<p>${jagacomment}</p>`);
 
     jagaurl = jaga.item.url
-    $('.jaga_url').append(`<p><a href="${jagaurl}" class="morebtn">もっとくわしく</a></p>`);
+    $('.jaga_url').append(`<p><a href="${jagaurl}" class="morebtn"><i class="material-icons-round">
+open_in_new
+</i>もっとくわしく</a></p>`);
     $('.jaga_name_send').append(`<input type = "hidden" name="jaga_name" value="${jaganame}">`);
     // 分割
     $(".jaga_name").children().addBack().contents().each(function() {

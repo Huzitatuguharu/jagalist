@@ -41,6 +41,8 @@ body {
   font-style: normal;
   background-color: #FFFCD1;
   font-weight: 500;
+  line-height:1.8;
+
 }
 
 h1 {
@@ -50,6 +52,12 @@ h1 {
   font-weight: bold;
 }
 
+.jaga_comment {
+  font-weight: 300;
+  line-height:2.2;
+
+
+}
 
 .area {
   margin: 0 64px 64px 64px;
@@ -82,6 +90,10 @@ h1 {
     #F2BA52 -2px -1px;
 
 }
+
+
+
+
 
 .jaga_list,
 .jaga_name {
@@ -135,7 +147,7 @@ h1 {
   border: none;
   position: relative;
   height: 60px;
-  padding: 8px 16px;
+  padding: 16px 20px;
   cursor: pointer;
   transition: 800ms ease all;
   outline: none;
@@ -186,7 +198,7 @@ h1 {
   background: #F2BA52;
   border: none;
   position: relative;
-  padding: 8px 16px;
+  padding: 16px 20px;
   cursor: pointer;
   transition: 800ms ease all;
   outline: none;
@@ -244,17 +256,16 @@ margin: 24px;
   font-weight: 500;
   font-size: 16px;
 
-  background: #03A66A;
-  color: #fff;
+  background: #FFF;
+  color: #1d1d1d;
   border: none;
   position: relative;
-  height: 60px;
-  padding: 8px 16px;
+  padding: 16px 20px;
   cursor: pointer;
   transition: 800ms ease all;
   outline: none;
   border-radius: 3px;
-  margin: 16px;
+  margin: 32px;
 }
 
 .seebtn:hover,
@@ -296,14 +307,7 @@ margin: 24px;
 
 
 
-/* 「icon」ではじまるclass名をもつアイコンすべてに適用 */
-[class^="material"] {
 
-  position: relative;
-  top: 5px;
-  fill: #fff;
-  font-weight: 500;
-}
 
 .comment {
   margin: 8px;
@@ -319,10 +323,16 @@ margin: 24px;
   position: relative;
   margin: 96px auto;
   padding: 10px 0;
-  width: 300px;
+  width: 640px;
   background: #fff;
   box-sizing: border-box;
   border-radius: 5px;
+
+}
+
+.listarea p{
+ font-weight: 300;
+ line-height: 1.8;
 }
 
 .ribbon16 {
@@ -336,7 +346,7 @@ margin: 24px;
   width: 40px;
   text-align: center;
   color: white;
-  font-size: 13px;
+  font-size: 12px;
   background: #F2BA52;
   border-radius: 2px 0 0 0;
 }
@@ -366,7 +376,7 @@ margin: 24px;
 textarea {
   display: inline-block;
   vertical-align: top;
-  width: 100%;
+  width: 70%;
   max-height: 170px;
   padding: 8px;
   box-sizing: border-box;
@@ -409,12 +419,12 @@ textarea:focus {
 .box30 .box-title {
   font-size: 1.3em;
   background: #F2BA52;
-  padding: 8px;
-  text-align: center;
+  padding: 16px;
   color: #FFF;
   font-weight: bold;
-  letter-spacing: 0.05em;
-  border-radius: 5px;
+  letter-spacing: 0.15em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 
 }
 
@@ -425,4 +435,57 @@ textarea:focus {
 
 #jagalist_btn{
   margin: 48px;
+}
+
+/* タイトルアニメ */
+.blur {
+  animation-name: blurAnime;
+  animation-duration: 2.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes blurAnime {
+  from {
+    filter: blur(10px);
+    transform: scale(1.22);
+    opacity: 0;
+  }
+
+  to {
+    filter: blur(0);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.blurTrigger {
+  opacity: 0;
+}
+
+
+/* 「icon」ではじまるclass名をもつアイコンすべてに適用 */
+[class^="material"] {
+
+  position: relative;
+  top: 5px;
+  fill: #fff;
+  font-weight: 500;
+  margin-right: 16px;
+}
+
+#icon_star{
+   top: 5px;
+   fill: #fff;
+   font-weight: 500;
+   margin :0px;
+
+}
+
+#icon_search{
+    position: relative;
+    top: 7px;
+    fill: #fff;
+    font-weight: 500;
+    margin-right: 16px;
+
 }

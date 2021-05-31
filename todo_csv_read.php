@@ -45,7 +45,10 @@ foreach ($aryjaga as $key => $value) {
   </div>';
       // echo "<p value=\"{$aryC/sv[0][$i]}\">{$aryCsv[0][$i]}</option>";
     } ?>
-    <p id="jagalist_btn"><a href="todo_csv_input.php" class="againbtn">じゃがさがし</a></p>
+    <p id="jagalist_btn"><a href="todo_csv_input.php" class="againbtn">
+        <i class="material-icons-round" id="icon_search">
+          search
+        </i>じゃがさがし</a></p>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -57,6 +60,31 @@ foreach ($aryjaga as $key => $value) {
         $this.replaceWith($this.text().replace(/(\S)/g, "<span>$&</span>"));
       }
     });
+
+
+    // 文字
+    function BlurTextAnimeControl() {
+      $('.jaga_list').each(function() { //blurTriggerというクラス名が
+        var elemPos = $(this).offset().top - 50; //要素より、50px上の
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll >= elemPos - windowHeight) {
+          $(this).addClass('blur'); // 画面内に入ったらblurというクラス名を追記
+        } else {
+          $(this).removeClass('blur'); // 画面外に出たらblurというクラス名を外す
+        }
+      });
+    }
+
+    // 画面をスクロールをしたら動かしたい場合の記述
+    $(window).scroll(function() {
+      BlurTextAnimeControl(); /* アニメーション用の関数を呼ぶ*/
+    }); // ここまで画面をスクロールをしたら動かしたい場合の記述
+
+    // 画面が読み込まれたらすぐに動かしたい場合の記述
+    $(window).on('load', function() {
+      BlurTextAnimeControl(); /* アニメーション用の関数を呼ぶ*/
+    }); // ここまで画面が読み込まれたらすぐに動かしたい場合の記述
   </script>
 </body>
 
